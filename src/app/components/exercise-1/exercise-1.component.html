@@ -1,0 +1,21 @@
+<div>
+
+    <strong>NG CLASS</strong>
+
+<hr/>
+<span [ngClass]="{'redText ': active}">Hello</span>
+
+<hr/>
+<p>is active? : {{active}}</p>
+<button [ngStyle]="{'background-color': active ? 'green': '#eaeaea'}"
+ (click)="handleToggle()">Toggle Active</button>
+</div>
+
+
+
+<div class="ngStyle">
+    <strong>NG STYLE</strong>
+
+    <hr/>
+    <span [ngStyle]="{'color': active ? 'red': '#000000'}">Hello</span>
+</div>
