@@ -5,17 +5,12 @@ import { Directive, ElementRef, HostListener, Inject, OnInit } from '@angular/co
   selector: '[capitalize]',
   standalone: true
 })
-export class CapitalizeDirectiveDirective {
+export class CapitalizeDirectiveDirective implements OnInit{
 
-  constructor(public ele: ElementRef<HTMLElement>)  {
-    console.log(ele.nativeElement)
-    this.capitalizeWord(ele.nativeElement.innerText)
+  constructor(public ele: ElementRef)  {}
+
+   ngOnInit(): void {
+     this.ele.nativeElement.style.textTransform = 'Capitalize';
    }
 
-
- public capitalizeWord(word: string) {
-  if(!word) return word;
-
-  return word[0].toUpperCase() + word.substring(1).toLowerCase();
- }
 }
