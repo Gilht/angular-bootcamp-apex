@@ -1,31 +1,32 @@
 <strong>1 - Ng For</strong>
 
 <div>
-    <ul>
-        <li *ngFor="let letter of letters">
-            {{letter}}
-        </li>
-    </ul>
+  <ul>
+    <li *ngFor="let letter of letters">
+      {{ letter }}
+    </li>
+  </ul>
 </div>
 
-<hr/>
+<hr />
 
 <strong>2 - NgIf</strong>
 <div *ngFor="let letter of letters">
-
-   <ul *ngIf="letter !== 'b'">
-    no equivale a b: {{letter}}
-   </ul>
+  <ul *ngIf="letter !== 'b'">
+    no equivale a b:
+    {{
+      letter
+    }}
+  </ul>
 </div>
 
-<hr/>
+<hr />
 
 <strong>3 - NgSwitch</strong>
 <div *ngFor="let letter of letters">
-
-    <ul [ngSwitch]="letter">
-        <li *ngSwitchCase="'a'">1</li>
-        <li *ngSwitchCase="'b'">2</li>
-        <li *ngSwitchCase="'c'">3</li>
-    </ul>
+  <ul [ngSwitch]="letter">
+    <li *ngSwitchCase="'a'">1</li>
+    <li *ngSwitchCase="'b'">2</li>
+    <li *ngSwitchCase="'c'">3</li>
+  </ul>
 </div>

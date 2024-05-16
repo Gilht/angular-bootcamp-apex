@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   standalone: true,
   imports: [CommonModule],
   templateUrl: './exercise-2.component.html',
-  styleUrl: './exercise-2.component.scss'
+  styleUrl: './exercise-2.component.scss',
 })
 export class Exercise2Component {
-public letters = ["a", "b", "c"]
+  public letters = ['a', 'b', 'c'];
 }
