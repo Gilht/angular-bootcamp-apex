@@ -1,0 +1,6 @@
+<fieldset class="content">
+    <legend class="label">What is your name?</legend>
+    <form [formGroup]="dialogForm" (ngSubmit)="onSubmit()">
+        <input type="text" formControlName="name">
+    </form>
+</fieldset>
