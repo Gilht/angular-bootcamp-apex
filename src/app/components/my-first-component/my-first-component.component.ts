@@ -2,10 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-my-first-component',
-  standalone: false,
   templateUrl: './my-first-component.component.html',
-  styleUrl: './my-first-component.component.scss'
+  styleUrl: './my-first-component.component.scss',
 })
-export class MyFirstComponentComponent {
-
-}
+export class MyFirstComponent{}
