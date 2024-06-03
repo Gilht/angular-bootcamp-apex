@@ -9,8 +9,8 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './exercise-4.component.scss'
 })
 export class Exercise4Component {
-  protected helloWorld: string = "Hello World"
-
+  protected oneWayDataBinding: string = "Hello World";
+  protected twoWayDataBinding: string = "Hello World"
 constructor() {}
 
 public handleBinding(): void{
