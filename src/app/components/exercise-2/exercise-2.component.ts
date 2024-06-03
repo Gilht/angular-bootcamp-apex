@@ -9,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './exercise-2.component.scss',
 })
 export class Exercise2Component {
-  public letters = ['a', 'b', 'c'];
+  public letters: string[] = ['a', 'b', 'c'];
 }
