@@ -17,14 +17,17 @@ export class DialogComponent {
 
   constructor(public dialog: MatDialog) {}
 
+  text: string = "";
+
   protected openDialog (){
   let dialogRef = this.dialog.open(ContentDialogComponent, {
+    data: { text: this.text},
     height: '50%',
     width: '40%',
    })
 
    dialogRef.afterClosed().subscribe((item) => {
-    console.log(item)
+    this.text = item.value;
    })
   }
 }

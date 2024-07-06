@@ -3,6 +3,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { BehaviorSubject } from 'rxjs';
 import { MatDialogRef } from '@angular/material/dialog';
+import { MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { Inject } from '@angular/core';
 
 @Component({
   selector: 'app-content-dialog',
@@ -13,7 +15,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 })
 export class ContentDialogComponent {
 
-  constructor(private dialogRef: MatDialogRef<ContentDialogComponent>) {
+  constructor(private dialogRef: MatDialogRef<ContentDialogComponent>, 
+    @Inject(MAT_DIALOG_DATA) public data: string) {
 
   }
 
@@ -21,7 +24,7 @@ export class ContentDialogComponent {
     name: new FormControl("", Validators.required)
   })
 
-  public onSubmit(){
-    console.log(this.dialogRef.)
+  protected closeDialog (){
+    this.dialogRef.close(this.dialogForm.controls.name)
   }
 }
