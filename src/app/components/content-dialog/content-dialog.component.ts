@@ -22,9 +22,9 @@ export class ContentDialogComponent {
 
  dialogForm = new FormGroup({
     name: new FormControl("", Validators.required)
-  })
+  });
 
   protected closeDialog (){
-    this.dialogRef.close(this.dialogForm.controls.name)
+    this.dialogRef.close(this.dialogForm.controls.name);
   }
 }

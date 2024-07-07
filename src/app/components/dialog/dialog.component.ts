@@ -24,7 +24,7 @@ export class DialogComponent {
     data: { text: this.text},
     height: '50%',
     width: '40%',
-   })
+   });
 
    dialogRef.afterClosed().subscribe((item) => {
     this.text = item.value;
