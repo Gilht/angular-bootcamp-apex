@@ -1,10 +1,10 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'customTransform',
+  name: 'capitalize',
   standalone: true
 })
-export class CustomTransformPipe implements PipeTransform {
+export class CapitalizePipe implements PipeTransform {
 
   transform(value: string, ...args: unknown[]): unknown {
     const newText = value
