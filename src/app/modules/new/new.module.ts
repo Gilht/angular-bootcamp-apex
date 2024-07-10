@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ExternalComponent } from '../../compponents/external/external.component';
+import { ExternalComponent } from '../../components/external/external.component';
 
 @NgModule({
   declarations: [ExternalComponent],

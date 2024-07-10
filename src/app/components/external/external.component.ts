@@ -7,7 +7,13 @@ import { RootService } from '../../services/root.service';
   templateUrl: './external.component.html',
   styleUrl: './external.component.scss'
 })
-export class ExternalComponent {
+export class ExternalComponent implements OnInit{
+
+  injectableVariable: string = "";
 
   constructor(protected rootService: RootService){}
+
+  ngOnInit(): void {
+    this.injectableVariable = this.rootService.persistenData
+  }
 }
